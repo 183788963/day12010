@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="radio" value="lin" v-model="name"/>林书豪
+        <input type="radio" value="zhu" v-model="name"/>朱一龙
+        <input type="radio" value="qiao" v-model="name"/>乔碧萝
+        <img v-if="name=='lin'" style="width:200px;height:150px" src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=c25c963e0d087bf469e15fbb93ba3c49/8435e5dde71190efa90f3baac11b9d16fcfa60cb.jpg"/>
+        <img v-else-if="name=='zhu'" style="width:200px;height:150px" src="https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D500/sign=fd5389b501f3d7ca08f63f76c21ebe3c/902397dda144ad343cf3490cdda20cf430ad85e9.jpg"/>
+        <img v-else-if="name=='qiao'" style="width:200px;height:150px" src="https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=f765f3a105d162d991e36a4e70b6c289/e61190ef76c6a7ef3b761543f2faaf51f3de6607.jpg"/>
+        <img v-else style="width:200px;height:150px" src="https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=397816053ffa828bd1239ae5c5242609/54fbb2fb43166d22ca0c87944a2309f79052d2b3.jpg"/>
+    </div>
+    <script>
+    var app = new Vue({
+        el:"#app",
+        data:{
+            show:'fasle',
+            name:""
+        }
+    });
+    </script>
+</body>
+</html>
